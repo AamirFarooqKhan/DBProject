@@ -15,12 +15,14 @@ public class Login {
 
     Customer cust_1 = new Customer();
     boolean status;
-    public Login(){
+    public Login(String email,String password){
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Email ");
         String email = sc.nextLine();
         System.out.print("Enter Password ");
         String password = sc.nextLine();
+        */
         status = verification(email, password);
     
     }

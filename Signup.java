@@ -9,23 +9,20 @@ package mini.amazon;
  *
  * @author Aamir Khan
  */
-import java.util.Scanner;
+
 public class Signup {
     private boolean status;
      String email;
      String password;
      String name;
      int acc_no;
-    public Signup(){
-         Scanner input = new Scanner(System.in);   
-         System.out.println("Please enter your email address ");
-         email = input.nextLine();
-         System.out.println("Please enter your password ");
-         password = input.nextLine();
-         System.out.println("Please enter your name ");
-         name     = input.nextLine();
-         System.out.println("Please enter your acc_no ");
-         acc_no = input.nextInt();
+    public Signup(String mail,String pass,String name,int account){
+        
+        
+         email = mail;
+         password = pass;
+         this.name     = name;
+         acc_no = account;
          status = Bank.verifyBankAccount(acc_no, name);
          registration();
     }
@@ -46,5 +43,11 @@ public class Signup {
             System.out.println("Registration failed!! Account number incorrect!!");
         }
     }
+
+
+    public boolean getStatus(){
+        return status;
+        
+}
 }
     
